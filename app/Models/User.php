@@ -20,6 +20,7 @@ class User extends Authenticatable
         'matricule',
         'email',
         'password',
+        'role_as',
     ];
 
     /**

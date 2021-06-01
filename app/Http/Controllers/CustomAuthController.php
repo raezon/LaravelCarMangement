@@ -75,11 +75,17 @@ class CustomAuthController extends Controller
 
     public function dashboard()
     {
+
         if(Auth::check()){
-            return view('dashboard');
+            if(Auth::user()->role_as==1)//0-user ,1-admin
+            {
+                return view('dashboardAdmin');
+            }else{
+                return view('dashboard');
+            }
         }
   
-        return redirect("login")->withSuccess('You are not allowed to access');
+        return redirect("login")->withSuccess('You are not Authenticated');
     }
     
 

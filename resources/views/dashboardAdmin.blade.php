@@ -32,7 +32,7 @@
             </div>
         </div>
     </nav>
-    I m a user
+    I m an admin
     @yield('content')
 
 </body>
