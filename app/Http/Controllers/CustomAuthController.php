@@ -77,7 +77,8 @@ class CustomAuthController extends Controller
     {
 
         if(Auth::check()){
-            if(Auth::user()->role_as==1)//0-user ,1-admin
+            //Auth::user() 3ibara 3en model user
+            if(Auth::user()->role_as==1)//0-user ,1-admin 
             {
                 return view('dashboardAdmin');
             }else{

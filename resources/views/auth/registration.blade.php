@@ -12,7 +12,7 @@
 <div class="col-md-6 col-lg-4">
 <div class="login-wrap p-0">
 <form action="{{ route('register.custom') }}" method="POST">
-@csrf
+{{ csrf_field() }}
 <div class="form-group">
                             <label for="matricule">{{ __('Matricule') }}</label>
                                 <input id="matricule" type="string" class="form-control @error('matricule') is-invalid @enderror" name="matricule" value="{{ old('matricule') }}" required autocomplete="matricule" placeholder="Entrer votre Matricule">
