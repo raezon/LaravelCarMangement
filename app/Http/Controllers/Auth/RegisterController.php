@@ -49,8 +49,15 @@ class RegisterController extends Controller
      */
     protected function validator(array $data)
     {
+        //penser a creer une function comme un validateur personaliser
+        //model voir une video je vais passer par le groupe fb
         return Validator::make($data, [
-            'matricule' => ['required', 'string', 'max:255'],
+            'matricule' => ['required', 'string', function($attribute,$value,$fail){
+                if($value=='1000'){
+                    $fail($attribute.'is invalid.');
+                }
+
+            }],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);

@@ -17,8 +17,8 @@ class CreateDemandeTable extends Migration
 
             
             $table->increments('numero_demande',20);	
-            $table->String('mission',191);
-            $table->String('distination',191);
+            $table->String('mission');
+            $table->String('distination');
             $table->Date('date_depart');
             $table->Date('date_retour');
             $table->Date('date_demande');

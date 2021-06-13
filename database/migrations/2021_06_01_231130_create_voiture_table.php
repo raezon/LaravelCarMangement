@@ -16,11 +16,11 @@ class CreateVoitureTable extends Migration
         Schema::create('voiture', function (Blueprint $table) {
 
             $table->increments('id_voiture',50);
-            $table->String('matricule',50);
-            $table->String('marque',50);
-            $table->String('numero_assurance',50);
-            $table->String('modele',50);
-            $table->String('couleur',50);
+            $table->String('matricule');
+            $table->String('marque');
+            $table->String('numero_assurance');
+            $table->String('modele');
+            $table->String('couleur');
             $table->timestamps();
         });
     }

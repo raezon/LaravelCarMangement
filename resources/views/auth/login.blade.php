@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+
 <section class="ftco-section">
 
 <div class="container">
@@ -57,3 +58,4 @@
 <script>eval(mod_pagespeed_xfgCyuItiV);</script>
 
 @endsection
+

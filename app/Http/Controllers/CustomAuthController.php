@@ -11,6 +11,19 @@ use Illuminate\Support\Facades\Auth;
 class CustomAuthController extends Controller
 {
 
+/*  furmulaire  */
+public function dotation()
+{
+    return view('formulaire.reçu_de_bon');
+}  
+/* */
+/*  gestionnaire   
+public function gestionnaire()
+{
+    return view('gestionnaire');
+}  
+ */
+
     public function index()
     {
         return view('auth.login');
@@ -49,7 +62,7 @@ class CustomAuthController extends Controller
     {  
      
         $request->validate([
-            'matricule' => ['required', 'string', 'max:255'],
+            'matricule' => ['required', 'string', 'max:255','unique:users'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
@@ -75,16 +88,23 @@ class CustomAuthController extends Controller
 
     public function dashboard()
     {
-
-        if(Auth::check()){
-            //Auth::user() 3ibara 3en model user
-            if(Auth::user()->role_as==1)//0-user ,1-admin 
-            {
-                return view('dashboardAdmin');
-            }else{
-                return view('dashboard');
-            }
-        }
+ 
+              if(Auth::check()){
+    //Auth::user() 3ibara 3en model user
+                  if(Auth::user()->role_as==1)//0-user ,1-admin , 2 gestionnaire
+                    {
+                      return view('dashboardAdmin');
+                     }else
+                           {if(Auth::user()->role_as==0 ) 
+                             {return view('dashboard');}
+                            else 
+                                 {if(Auth::user()->role_as==2) 
+                                                               { 
+                                                                return view('gestionnaire'); 
+                                                            }
+              }
+          }
+  }
   
         return redirect("login")->withSuccess('You are not Authenticated');
     }
