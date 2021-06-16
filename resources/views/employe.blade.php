@@ -29,7 +29,8 @@
    </div>
 </div>
  {!!  $dataTable->scripts()  !!}
-</section>
-    
+
+  
+ 
 </body>
 </html>

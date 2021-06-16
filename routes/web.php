@@ -33,7 +33,10 @@ Route::get('bon', [CustomAuthController::class, 'dotation'])->name('reçu_de_bon
 Route::get('gestionnaire', [CustomAuthController::class, 'gestionnaire'])->name('gestionnaire'); 
 
 /* data table employe*/
-Route::get('/employe', [EmployeController::class, 'employe'])-> name('employe');
+//Route::get('/employe', [EmployeController::class, 'employe'])-> name('employe');
+Route::get('employes', [EmployeController::class, 'index']);
+
+Route::get('employes/list', [EmployeController::class, 'getEmployes'])->name('employes.list');//
 /**Route::get('/emp', [Controlleremploye::class, 'emp'])-> name('emp');**/
 
 /**** users table** 
