@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
+use App\Rules\MatriculeRule;
 
 class CustomAuthController extends Controller
 {
@@ -62,7 +63,7 @@ public function gestionnaire()
     {  
      
         $request->validate([
-            'matricule' => ['required', 'string', 'max:255','unique:users'],
+            'matricule' => ['required',new MatriculeRule , 'string',  'max:255', 'unique:users'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);

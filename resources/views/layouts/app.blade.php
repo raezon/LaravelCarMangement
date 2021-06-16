@@ -19,7 +19,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
-<body class="img js-fullheight" style="background-image:url('/img/16.jpg');">
+<body class="img js-fullheight" style="background-image:url('/img/parc_auto3.jpg');">
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">

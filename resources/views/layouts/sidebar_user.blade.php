@@ -6,11 +6,21 @@
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
 
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="login" class="nav-link">Deconnecter</a>
+
+ <!--************************************************************************************* -->
+
+ <li class="nav-item d-none d-sm-inline-block">
+        <a href="{{ route('signout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"  class="nav-link">
+         <i data-feather="power" class="svg-icon mr-2 ml-1"></i> Deconnecter</a>
+         <form id="logout-from" action="{{ route('signout') }}" method="post" >
+         {{csrf_field()}}
+         </form>
+   
       </li>
       
     </ul>
+ <!--************************************************************************************* -->
+
 
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
@@ -114,7 +124,6 @@
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
- <!--************************************************************************************* -->
             <ul class="nav nav-treeview">
                           < <li class="nav-item">
                 <a href="./index3.html" class="nav-link">
@@ -123,7 +132,6 @@
                  
                 </a>
               </li>
-  <!--********************************************************************************* -->
               <li class="nav-item">
                 <a href="./index3.html" class="nav-link">
                 <i class="nav-icon fas fa-file"></i>
