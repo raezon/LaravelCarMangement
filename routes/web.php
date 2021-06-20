@@ -34,9 +34,9 @@ Route::get('gestionnaire', [CustomAuthController::class, 'gestionnaire'])->name(
 
 /* data table employe*/
 //Route::get('/employe', [EmployeController::class, 'employe'])-> name('employe');
-Route::get('employes', [EmployeController::class, 'index']);
 
-Route::get('employes/list', [EmployeController::class, 'getEmployes'])->name('employes.list');//
+
+
 /**Route::get('/emp', [Controlleremploye::class, 'emp'])-> name('emp');**/
 
 /**** users table** 
@@ -44,3 +44,7 @@ Route::get('/regestration_users', [EmployeController::class, 'regestration_users
 Route::post('/regestration_user', [EmployeController::class, 'regestration_user'])-> name('regestration_user');
 Route::get('/table_users', [EmployeController::class, 'table_users'])-> name('table_users');
 */
+Route::resource('employee', 'App\\Http\\Controllers\\Employe\EmployeeController');
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
