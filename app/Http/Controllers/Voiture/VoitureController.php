@@ -1,15 +1,18 @@
 <?php
- namespace App\Http\Controllers\Employe;
+
+namespace App\Http\Controllers\voiture;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
+use App\Models\Voitures;
 use App\Http\Requests;
 
-use App\Models\Employes;
-use Illuminate\Http\Request;
 
-class EmployeeController extends Controller
+
+class VoitureController extends Controller
 {
-    /**
+    
+ /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\View\View
@@ -20,35 +23,35 @@ class EmployeeController extends Controller
         $perPage = 25;
 
         if (!empty($keyword)) {
-            $employes = Employes::where('id', 'LIKE', "%$keyword%")
-                ->orWhere('matricule', 'LIKE', "%$keyword%")
-                ->orWhere('nom', 'LIKE', "%$keyword%")
-                ->orWhere('prenom', 'LIKE', "%$keyword%")
-                ->orWhere('mobile', 'LIKE', "%$keyword%")
-                ->orWhere('email', 'LIKE', "%$keyword%")
-                ->orWhere('fonction', 'LIKE', "%$keyword%")
-                ->orWhere('grade', 'LIKE', "%$keyword%")
-                ->orWhere('structure', 'LIKE', "%$keyword%")
-                ->orWhere('pc', 'LIKE', "%$keyword%")
+            $voitures = Voitures::where('id', 'LIKE', "%$keyword%")
+                ->orWhere('immatriculation', 'LIKE', "%$keyword%")
+                ->orWhere('type', 'LIKE', "%$keyword%")
+                ->orWhere('marque', 'LIKE', "%$keyword%")
+                ->orWhere('numero_assurance', 'LIKE', "%$keyword%")
+                ->orWhere('modele', 'LIKE', "%$keyword%")
+                ->orWhere('couleur', 'LIKE', "%$keyword%")
                 ->latest()->paginate($perPage);
         } else {
-            $employes = Employes::latest()->paginate($perPage);
+            $voitures = voitures::latest()->paginate($perPage);
         }
 
-        return view('employes.index', compact('employes'));
+        return view('voitures.index', compact('voitures'));
     }
 
-    /**
+
+
+     /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\View\View
      */
     public function create()
     {
-        return view('employes.create');
+        return view('voitures.create');
     }
 
-    /**
+
+ /**
      * Store a newly created resource in storage.
      *
      * @param \Illuminate\Http\Request $request
@@ -60,9 +63,9 @@ class EmployeeController extends Controller
         
         $requestData = $request->all();
         
-        Employes::create($requestData);
+        Voitures::create($requestData);
 
-        return redirect('employes')->with('flash_message', 'Employes added!');
+        return redirect('voitures')->with('flash_message', 'Voitures added!');
     }
 
     /**
@@ -74,9 +77,9 @@ class EmployeeController extends Controller
      */
     public function show($id)
     {
-        $employes = Employes::findOrFail($id);
+        $Voitures = Voitures::findOrFail($id);
 
-        return view('employes.show', compact('employes'));
+        return view('Voitures.show', compact('Voitures'));
     }
 
     /**
@@ -88,9 +91,9 @@ class EmployeeController extends Controller
      */
     public function edit($id)
     {
-        $employes = Employes::findOrFail($id);
+        $voitures = voitures::findOrFail($id);
 
-        return view('employes.edit', compact('employes'));
+        return view('voitures.edit', compact('voitures'));
     }
 
     /**
@@ -106,10 +109,10 @@ class EmployeeController extends Controller
         
         $requestData = $request->all();
         
-        $employes = Employes::findOrFail($id);
-        $employes->update($requestData);
+        $voitures = voitures::findOrFail($id);
+        $voitures->update($requestData);
 
-        return redirect('employes')->with('flash_message', 'Employes updated!');
+        return redirect('voitures')->with('flash_message', 'voitures updated!');
     }
 
     /**
@@ -123,8 +126,20 @@ class EmployeeController extends Controller
     public function destroy($id)
     {
         
-        Employes::destroy($id);
+        voitures::destroy($id);
 
-        return redirect('employes')->with('flash_message', 'Employes deleted!');
+        return redirect('voitures')->with('flash_message', 'voitures deleted!');
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+

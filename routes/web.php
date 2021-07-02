@@ -2,7 +2,17 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CustomAuthController;
-use App\Http\Controllers\EmployeController;
+use App\Http\Controllers\Employe\EmployeeController;
+use App\Http\Controllers\DemandeSansChau\DemandeSansChauController;
+use App\Http\Controllers\DemandeAvecChau\DemandeAvecChauController;
+use App\Http\Controllers\Voiture\VoitureController;
+use App\Http\Controllers\demandedotation\demande_de_dotation_en_carburantsController;
+use App\Http\Controllers\demandedotation\Gesdemande_de_dotation_en_carburantsController;
+use App\Http\Controllers\recuBonDotation\RecuBonDotationController;
+use App\Http\Controllers\users\usersController;
+use App\Http\Controllers\DemandeSansChau\GesDemandeSansChauController;
+use App\Http\Controllers\DemandeAvecChau\GesDemandeAvecChauController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -26,11 +36,10 @@ Route::post('custom-login', [CustomAuthController::class, 'customLogin'])->name(
 Route::get('registration', [CustomAuthController::class, 'registration'])->name('register-user'); 
 Route::post('custom-registration', [CustomAuthController::class, 'customRegistration'])->name('register.custom'); 
 Route::get('signout', [CustomAuthController::class, 'signOut'])->name('signout');
- Route::get('/home', [App\Http\Controllers\CustomAuthController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\CustomAuthController::class, 'index'])->name('home');
 
 /* rote formulaire*/
-Route::get('bon', [CustomAuthController::class, 'dotation'])->name('reçu_de_bon');  
-Route::get('gestionnaire', [CustomAuthController::class, 'gestionnaire'])->name('gestionnaire'); 
+Route::get('bon', [CustomAuthController::class, 'dotation'])->name('reçu_de_bon');
 
 /* data table employe*/
 //Route::get('/employe', [EmployeController::class, 'employe'])-> name('employe');
@@ -44,7 +53,15 @@ Route::get('/regestration_users', [EmployeController::class, 'regestration_users
 Route::post('/regestration_user', [EmployeController::class, 'regestration_user'])-> name('regestration_user');
 Route::get('/table_users', [EmployeController::class, 'table_users'])-> name('table_users');
 */
-Route::resource('employee', 'App\\Http\\Controllers\\Employe\EmployeeController');
-Auth::routes();
+Route::resource('employes', EmployeeController::class);
+Route::resource('voitures', VoitureController::class);
+Route::resource('DemandeSansChau', DemandeSansChauController::class);
+Route::resource('DemandeAvecChau', DemandeAvecChauController::class);
+Route::resource('demande_de_dotation_en_carburants', demande_de_dotation_en_carburantsController::class);
+Route::resource('RecuBonDotation', RecuBonDotationController::class);
+Route::resource('users', usersController::class);
+Route::resource('GesDotation_en_carburants', Gesdemande_de_dotation_en_carburantsController::class);
+Route::resource('GesDemandeSansChau', GesDemandeSansChauController::class);
+Route::resource('GesDemandeAvecChau',GesDemandeAvecChauController::class);
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Auth::routes();

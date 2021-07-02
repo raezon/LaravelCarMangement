@@ -3,7 +3,7 @@
 namespace App\Rules;
 
 use Illuminate\Contracts\Validation\Rule;
-use  App\Models\Employe;
+use  App\Models\Employes;
 use Illuminate\Support\Facades\DB;
 
 class MatriculeRule implements Rule
@@ -30,7 +30,7 @@ class MatriculeRule implements Rule
         $employe = DB::table('employes')->where('matricule', $value)->first();
        
 
-        if($employe)// employe n est pas vid( est que l9ina la de matricule )
+        if($employe)// employe n est pas vide( est ce que l9ina la mm   de matricule dans employe )
            // if($employe->matricule) //
                 return true;
         
