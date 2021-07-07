@@ -47,7 +47,7 @@ class demande_de_dotation_en_carburants extends Model
                            'fonction',
                            'strctr_attache',
                            'type_véhicule',
-                           'immatriculation',
+                           'N_serie',
                                     
                         ];
 }

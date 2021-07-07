@@ -1,13 +1,24 @@
 
 <div  class="form-group ">
     <label for="matricule" class="control-label">{{ __('Matricule') }}</label>
-                                <input id="matricule" type="string" class="form-control @error('matricule') is-invalid @enderror" name="matricule" value="{{ isset($employes->matricule) ? $employes->matricule : ''}}"  >
+                                <input id="matricule" type="string" class="form-control @error('matricule') is-invalid @enderror" name="matricule" value="{{ isset($employes->matricule) ? $employes->matricule : ''}}"  required autocomplete="matricule"  >
                                 @error('matricule')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
    </div>
+
+<div class="form-group">
+                            <label for="matricule">{{ __('Matricule') }}</label>
+                                <input id="matricule" type="string" class="form-control @error('matricule') is-invalid @enderror" name="matricule" value="{{ old('matricule') }}" required autocomplete="matricule" placeholder="Entrer votre Matricule">
+                                @error('matricule')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror                           
+                        </div>
+
 <div  class="form-group ">
     <label for="nom"  class="control-label">{{ __('Nom') }}</label>
                                 <input id="nom" type="string" class="form-control @error('nom') is-invalid @enderror" name="nom" value="{{ isset($employes->nom) ? $employes->nom : ''}}" required autocomplete="nom" >

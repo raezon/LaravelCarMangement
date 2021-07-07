@@ -148,9 +148,9 @@
    </div>
    
    <div  class="form-group ">
-   <label for="immatriculation"  for="immatriculation" class="control-label">{{ __('Immatriculation') }}</label>
-                                <input id="immatriculation" type="string" class="form-control @error('immatriculation') is-invalid @enderror" name="immatriculation" value="{{ isset($RecuBonDotation->immatriculation) ? $RecuBonDotation->immatriculation : ''}}" required autocompnum_référencete="immatriculation" >
-                                @error('immatriculation')
+   <label for="N_serie"  for="N_serie" class="control-label">{{ __('N° serie') }}</label>
+                                <input id="N_serie" type="string" class="form-control @error('N_serie') is-invalid @enderror" name="N_serie" value="{{ isset($RecuBonDotation->N_serie) ? $RecuBonDotation->N_serie : ''}}" required autocompnum_référencete="N_serie" >
+                                @error('N_serie')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>

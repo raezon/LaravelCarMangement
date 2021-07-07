@@ -40,7 +40,7 @@ class RecuBonDotation extends Model
                             'prenom',
                             'fonction',
                             'structure_attache',
-                            'immatriculation',
+                            'N_serie',
                              ];
                             
                            

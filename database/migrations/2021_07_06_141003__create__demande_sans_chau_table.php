@@ -24,7 +24,7 @@ class CreateDemandeSansChauTable extends Migration
             $table->Date('date');
             $table->Time('heure_depart');
             $table->String('motif');
-            $table->String('Immatriculation');
+            $table->String('N_serie',17)->unique();
             $table->String('type');
             $table->String('marque');
             $table->String('état_Véhicule');

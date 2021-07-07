@@ -36,7 +36,7 @@
                                     <tr><th> Prénom </th><td> {{ $RecuBonDotation->prenom }} </td></tr>
                                     <tr><th> Fonction </th><td> {{ $RecuBonDotation->fonction }} </td></tr>
                                     <tr><th> Structure D'attache </th><td> {{ $RecuBonDotation->structure_attache }} </td></tr>
-                                    <tr><th> Immatriculation </th><td> {{ $RecuBonDotation->immatriculation }} </td></tr>
+                                    <tr><th> N° serie </th><td> {{ $RecuBonDotation->N_serie }} </td></tr>
                                 </tbody>
                             </table>
                         </div>

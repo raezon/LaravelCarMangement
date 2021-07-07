@@ -32,7 +32,7 @@ class CreateRecuBonDotationTable extends Migration
             $table->String('prenom');
             $table->String('fonction');
             $table->String('structure_attache');
-            $table->String('immatriculation');
+            $table->String('N_serie',17)->unique();
             
             $table->timestamps();
 

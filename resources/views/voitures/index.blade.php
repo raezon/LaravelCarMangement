@@ -40,13 +40,14 @@
                         <div class="table-responsive">
                             <table class="table" id="tableau">
                                 <thead>
-                                    <tr><th>ID</th>
-                                        <th>Immatriculation</th>
+                                        <tr><th>ID</th>
+                                        <th>N° Série</th>
+                                        <th>Ancienne Immatriculation</th>
+                                        <th>Nouvelle Immatriculation</th>
+                                        <th>Numero D'assurance</th>
+                                        <th>Energie</th>
                                         <th>Type</th>
-                                        <th>Marque</th>
-                                        <th>Numéro d'assurance</th>
-                                        <th>Mdèle</th>
-                                        <th>Couleur</th>
+                                        
                                         <th style="width: 100px">Actions</th>
                                     </tr>
                                 </thead>
@@ -54,12 +55,12 @@
                                 @foreach($voitures as $item)
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
-                                        <td>{{ $item->immatriculation }}</td>
-                                        <td>{{ $item->type }}</td>
-                                        <td>{{ $item->marque }}</td>
+                                        <td>{{ $item->N_serie }}</td>
+                                        <td>{{ $item->ancienne_immat }}</td>
+                                        <td>{{ $item->nouvelle_immat }}</td>
                                         <td>{{ $item->numero_assurance }}</td>
-                                        <td>{{ $item->modele }}</td>
-                                        <td>{{ $item->couleur }}</td>
+                                        <td>{{ $item->Energie }}</td>
+                                        <td>{{ $item->type }}</td>
 
                                         <td style="width: 100px">
                                        <a href="{{ url('/voitures/' . $item->id) }}" title="View voitures"><button class="btn btn-info btn-sm"><i class="fa fa-eye" aria-hidden="true"></i></button></a>

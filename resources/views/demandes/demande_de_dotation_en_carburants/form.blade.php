@@ -197,9 +197,9 @@
  <br>
 
  <div class="form-group ">
-   <label for="immatriculation"  for="immatriculation" class="control-label">{{ __('Immatriculation') }}</label>
-                                  <input id="immatriculation" type="string" class="form-control @error('immatriculation') is-invalid @enderror" name="immatriculation" value="{{ isset($demande_de_dotation_en_carburants->immatriculation) ? $demande_de_dotation_en_carburants->immatriculation : ''}}" required autocomplete="immatriculation" >
-                                  @error('Immatriculation')
+   <label for="N_serie"  for="N_serie" class="control-label">{{ __('N° serie') }}</label>
+                                  <input id="N_serie" type="string" class="form-control @error('N_serie') is-invalid @enderror" name="N_serie" value="{{ isset($demande_de_dotation_en_carburants->N_serie) ? $demande_de_dotation_en_carburants->N_serie : ''}}" required autocomplete="N_serie" >
+                                  @error('N° serie')
                                   <span class="invalid-feedback" role="alert">
                                       <strong>{{ $message }}</strong>
                                   </span>

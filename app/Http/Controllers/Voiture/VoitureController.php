@@ -24,12 +24,22 @@ class VoitureController extends Controller
 
         if (!empty($keyword)) {
             $voitures = Voitures::where('id', 'LIKE', "%$keyword%")
-                ->orWhere('immatriculation', 'LIKE', "%$keyword%")
+                ->orWhere('N_serie', 'LIKE', "%$keyword%")
+                ->orWhere('ancienne_immat', 'LIKE', "%$keyword%")
+                ->orWhere('nouvelle_immat', 'LIKE', "%$keyword%")
+                ->orWhere('numero_assurance', 'LIKE', "%$keyword%")
+                ->orWhere('Energie', 'LIKE', "%$keyword%")
                 ->orWhere('type', 'LIKE', "%$keyword%")
                 ->orWhere('marque', 'LIKE', "%$keyword%")
-                ->orWhere('numero_assurance', 'LIKE', "%$keyword%")
                 ->orWhere('modele', 'LIKE', "%$keyword%")
                 ->orWhere('couleur', 'LIKE', "%$keyword%")
+                ->orWhere('Genre', 'LIKE', "%$keyword%")
+                ->orWhere('nbr_plc', 'LIKE', "%$keyword%")
+                ->orWhere('nbr_chv', 'LIKE', "%$keyword%")
+                ->orWhere('tonnage', 'LIKE', "%$keyword%")
+                ->orWhere('dmc', 'LIKE', "%$keyword%")
+                ->orWhere('etat', 'LIKE', "%$keyword%")
+                ->orWhere('qualité', 'LIKE', "%$keyword%")
                 ->latest()->paginate($perPage);
         } else {
             $voitures = voitures::latest()->paginate($perPage);
@@ -131,15 +141,3 @@ class VoitureController extends Controller
         return redirect('voitures')->with('flash_message', 'voitures deleted!');
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-

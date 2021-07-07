@@ -36,7 +36,7 @@ class DemandeSansChau extends Model
                             'date',
                             'heure_depart',
                             'motif',
-                            'Immatriculation',
+                            'N_serie',
                             'type',
                             'marque',
                             'état_Véhicule',

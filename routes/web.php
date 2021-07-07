@@ -12,6 +12,7 @@ use App\Http\Controllers\recuBonDotation\RecuBonDotationController;
 use App\Http\Controllers\users\usersController;
 use App\Http\Controllers\DemandeSansChau\GesDemandeSansChauController;
 use App\Http\Controllers\DemandeAvecChau\GesDemandeAvecChauController;
+use App\Http\Controllers\chart\chartController;
 
 
 /*
@@ -63,5 +64,11 @@ Route::resource('users', usersController::class);
 Route::resource('GesDotation_en_carburants', Gesdemande_de_dotation_en_carburantsController::class);
 Route::resource('GesDemandeSansChau', GesDemandeSansChauController::class);
 Route::resource('GesDemandeAvecChau',GesDemandeAvecChauController::class);
+Route::resource('GesDemandeAvecChau',GesDemandeAvecChauController::class);
+Route::resource('voitures', VoitureController::class);
+/*****************tableu  de bord */
+Route::get('/chart', [chartController::class, 'index']);
+
+
 
 Auth::routes();

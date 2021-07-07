@@ -32,12 +32,22 @@
                             <table class="table">
                                 <tbody>
                                     <tr><th>ID</th><td>{{ $Voitures->id }}</td></tr>
-                                    <tr><th> Immatriculatio </th><td> {{ $Voitures->immatriculation }} </td></tr>
+                                    <tr><th> N° Série </th><td> {{ $Voitures->N_serie }} </td></tr>
+                                    <tr><th> Ancienne Immatriculation </th><td> {{ $Voitures->ancienne_immat }} </td></tr> 
+                                    <tr><th> Nouvelle Immatriculation </th><td> {{ $Voitures->nouvelle_immat }} </td></tr>
+                                    <tr><th> Numero D'assurance </th><td> {{ $Voitures->numero_assurance }} </td></tr>
+                                    <tr><th> Energie </th><td> {{ $Voitures->Energie }} </td></tr>
                                     <tr><th> Type </th><td> {{ $Voitures->type }} </td></tr>
                                     <tr><th> Marque </th><td> {{ $Voitures->marque }} </td></tr>
-                                    <tr><th> Numero D'assurance </th><td> {{ $Voitures->numero_assurance }} </td></tr>
-                                    <tr><th> Modèle </th><td> {{ $Voitures->modele }} </td></tr>
-                                    <tr><th> Couleur </th><td> {{ $Voitures->couleur }} </td></tr>
+                                    <tr><th>Modèle</th><td>{{ $Voitures->modele }}</td></tr>
+                                    <tr><th>Couleur</th><td>{{ $Voitures->couleur }}</td></tr>
+                                    <tr><th>Genre</th><td>{{ $Voitures->Genre }}</td></tr>
+                                    <tr><th>Nombre De Place</th><td>{{ $Voitures->nbr_plc }}</td></tr>
+                                    <tr><th>Nombre De chevaux</th><td>{{ $Voitures->nbr_chv }}</td></tr>
+                                    <tr><th>Tonnage</th><td>{{ $Voitures->tonnage }}</td></tr>
+                                    <tr><th>DATE DE MISE EN CIRCULATION</th><td>{{ $Voitures->dmc }}</td></tr>
+                                    <tr><th>L'état De Véhicule</th><td>{{ $Voitures->etat }}</td></tr>
+                                    <tr><th>Qualité</th><td>{{ $Voitures->qualité }}</td></tr>
                                 </tbody>
                             </table>
                         </div>

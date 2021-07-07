@@ -48,7 +48,7 @@
         <tr><th>Fonction</th>                        <td> {{ $demande_de_dotation_en_carburants->fonction }} </td></tr>
         <tr><th>Structure D'attache</th>             <td> {{ $demande_de_dotation_en_carburants->strctr_attache }} </td></tr>
         <tr><th>Type De Véhicule</th>                <td> {{ $demande_de_dotation_en_carburants->type_véhicule}} </td> <td></td></tr>
-        <tr><th>Immatriculation</th>                 <td> {{ $demande_de_dotation_en_carburants->immatriculation }} </td></tr>
+        <tr><th>N° serie</th>                        <td> {{ $demande_de_dotation_en_carburants->N_serie }} </td></tr>
                                 </tbody>
                             </table>
                         </div>

@@ -40,7 +40,7 @@
                                     <tr><th>Date</th><td>{{ $demandesanschau->date }}</td></tr>
                                     <tr><th>Heure De Départ</th><td>{{ $demandesanschau->heure_depart }}</td></tr>
                                     <tr><th>Motif</th><td>{{ $demandesanschau->motif }}</td></tr>
-                                    <tr><th>Immatriculation</th><td>{{ $demandesanschau->Immatriculation }}</td></tr>
+                                    <tr><th>N° serie</th><td>{{ $demandesanschau->N_serie }}</td></tr>
                                     <tr><th>Type</th><td>{{ $demandesanschau->type }}</td></tr>
                                     <tr><th>Marque</th><td>{{ $demandesanschau->marque }}</td></tr>
                                     <tr><th>L'état De Véhicule</th><td>{{ $demandesanschau->état_Véhicule }}</td></tr>

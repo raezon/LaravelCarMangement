@@ -1,7 +1,29 @@
 @extends('layouts.app')
-@section('main')
+@section('main' )
 
-<section class="ftco-section">
+
+        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm" >
+            <div class="container">
+
+
+                    <!-- Right Side Of Navbar -->
+                    <div class="collapse navbar-collapse" id="navbarNav" >
+                         <ul class="navbar-nav">
+                            @guest
+
+                             <li class="nav-item">
+                                   <a class="nav-link" href="{{ route('login') }}">Login</a>
+                             </li>
+                            @endguest
+                    </ul>
+            </div>
+            
+            </div>
+        </nav>
+
+    
+
+<section class="ftco-section"    >
 <div class="container">
 <div class="row justify-content-center">
 <div class="col-md-6 text-center mb-5">

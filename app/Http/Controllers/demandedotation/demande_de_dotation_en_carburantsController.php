@@ -37,7 +37,7 @@ class demande_de_dotation_en_carburantsController extends Controller
                 ->orWhere('fonction', 'LIKE', "%$keyword%")
                 ->orWhere("strctr_attache", 'LIKE', "%$keyword%")
                 ->orWhere('type_véhicule', 'LIKE', "%$keyword%")
-                ->orWhere('immatriculation', 'LIKE', "%$keyword%")
+                ->orWhere('N_serie', 'LIKE', "%$keyword%")
               
 
                 ->latest()->paginate($perPage);

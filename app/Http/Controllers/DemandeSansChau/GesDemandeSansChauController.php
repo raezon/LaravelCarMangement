@@ -30,7 +30,7 @@ class GesDemandeSansChauController extends Controller
                     ->orWhere('date', 'LIKE', "%$keyword%")
                     ->orWhere('heure_depart', 'LIKE', "%$keyword%")
                     ->orWhere('motif', 'LIKE', "%$keyword%")
-                    ->orWhere('Immatriculation', 'LIKE', "%$keyword%")
+                    ->orWhere('N_serie', 'LIKE', "%$keyword%")
                     ->orWhere('type', 'LIKE', "%$keyword%")
                     ->orWhere('marque', 'LIKE', "%$keyword%")
                     ->orWhere('état_Véhicule', 'LIKE', "%$keyword%")

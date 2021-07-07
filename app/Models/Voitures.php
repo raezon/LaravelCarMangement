@@ -28,15 +28,30 @@ class Voitures extends Model
      * @var array
      */
     protected $fillable = ['id',
-                            'immatriculation',
+                            'N_serie',
+                            'ancienne_immat',
+                            'nouvelle_immat',
+                            'numero_assurance',
+                            'Energie',
                             'type',
-                            'marque', 
-                            'numero_assurance', 
-                            'modele', 
+                            'marque',
+                            'modele',
                             'couleur',
+                            'Genre',
+                            'nbr_plc',
+                            'nbr_chv',
+                            'tonnage',
+                            'dmc',
+                            'etat',
+                            'qualité',
                             ];
 
 
 
 
 }
+
+
+
+
+

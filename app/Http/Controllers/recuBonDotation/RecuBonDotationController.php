@@ -32,7 +32,7 @@ class RecuBonDotationController extends Controller
                     ->orWhere('prenom', 'LIKE', "%$keyword%")                  
                     ->orWhere('fonction', 'LIKE', "%$keyword%")
                     ->orWhere('structure_attache', 'LIKE', "%$keyword%")
-                    ->orWhere('immatriculation', 'LIKE', "%$keyword%")
+                    ->orWhere('N_serie', 'LIKE', "%$keyword%")
                     ->latest()->paginate($perPage);
             } else {
                 $RecuBonDotation = RecuBonDotation::latest()->paginate($perPage);

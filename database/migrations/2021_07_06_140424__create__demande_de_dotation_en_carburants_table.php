@@ -44,7 +44,7 @@ class CreateDemandeDeDotationEnCarburantsTable extends Migration
                                          'Véhicule De Service "Diesel"',
                                          'Véhicule De Fonction "Essence"',
                                          'Véhicule De Fonction "Diesel"']);
-           $table->String('immatriculation');
+           $table->String('N_serie', 17)->unique();
 /********************accuse de receptionn************************** */
        
             
